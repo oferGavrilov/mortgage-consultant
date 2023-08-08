@@ -1,7 +1,10 @@
+import ContactUs from '@/components/ContactUs'
 import React from 'react'
 
-export default function ContactUS() {
+export default function Page () {
   return (
-    <div>ContactUS</div>
+    <div className='min-h-screen mt-28 p-4'>
+      <ContactUs />
+    </div>
   )
 }

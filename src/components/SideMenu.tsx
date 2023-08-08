@@ -1,6 +1,7 @@
 import SocialMedia from '@/common/SocialMedia'
 import useClickOutside from '@/hooks/useClickOutside';
-import React, { useEffect, useRef } from 'react'
+import Link from 'next/link';
+import React, { useRef } from 'react'
 
 interface Props {
       isOpen: boolean
@@ -15,20 +16,34 @@ export default function SideMenu ({ isOpen, setIsOpen }: Props) {
 
       return (
             <section ref={sideMenuRef} className={`side-menu-container ${isOpen ? 'translate-x-0' : '-translate-x-[300px]'}`}>
-                  <h2 className='text-center text-2xl py-10'>Main Menu</h2>
+                  <h2 className='text-center text-2xl py-8'>Main Menu</h2>
 
                   <h4 className='px-4 text-lg mb-2 text-[#0582ca]'>שירותים</h4>
                   <ul>
-                        <li className='side-menu-li'>ייעוץ משכנתא חדשה</li>
-                        <li className='side-menu-li'>מחזור משכנתא קיימת</li>
-                        <li className='side-menu-li'>הלוואה לכל מטרה</li>
+                        <Link href='/service/new-mortgage' onClick={() => setIsOpen(false)}>
+                              <li className='side-menu-li'>
+                                    ייעוץ משכנתא חדשה
+                              </li>
+                        </Link>
+                        <Link href='/service/exists-mortgage' onClick={() => setIsOpen(false)}>
+                              <li className='side-menu-li'>
+                                    מחזור משכנתא קיימת
+                              </li>
+                        </Link>
+                        <Link href='/service/loan' onClick={() => setIsOpen(false)}>
+                              <li className='side-menu-li'>
+                                    הלוואה לכל מטרה
+                              </li>
+                        </Link>
                   </ul>
 
                   <div className='my-16'>
                         <h4 className='px-4 text-lg mb-2 text-[#0582ca]'>נוספים</h4>
                         <ul>
                               <li className='side-menu-li'>לקוחות ממליצים</li>
-                              <li className='side-menu-li'>צור קשר</li>
+                              <Link href='/contact-us' onClick={() => setIsOpen(false)}>
+                                    <li className='side-menu-li'>צור קשר</li>
+                              </Link>
                         </ul>
                   </div>
                   <div className='flex flex-col items-center text-center'>
