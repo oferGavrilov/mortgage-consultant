@@ -1,0 +1,18 @@
+.fade-left {
+      animation-name: fade-left;
+      animation-duration: .5s;
+      /* animation-timing-function: ease-in; */
+      animation-fill-mode: backwards;
+}
+
+@keyframes fade-left {
+      0% {
+            opacity: 0;
+            transform: translateX(40vh);
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateX(0);
+      }
+}

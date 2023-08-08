@@ -2,9 +2,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import SideMenu from './SideMenu'
 
 import { AiOutlineMenu } from 'react-icons/Ai'
-import SideMenu from './SideMenu'
+import { BiLogoGmail } from 'react-icons/bi'
+import { AiTwotonePhone } from 'react-icons/Ai'
+import { BsWhatsapp } from 'react-icons/bs'
 
 export default function Header () {
 
@@ -22,13 +25,13 @@ export default function Header () {
 
                   <div className='hidden md:flex gap-x-3'>
                         <div className='header-link'>
-                              <span>ייעוץ משכנתא חדשה</span>
+                              <Link href='/service/new-mortgage'>ייעוץ משכנתא חדשה</Link>
                         </div>
                         <div className='header-link'>
-                              <span>מחזור משכנתא קיימת</span>
+                              <Link href='exists-mortgage'>מחזור משכנתא קיימת</Link>
                         </div>
                         <div className='header-link'>
-                              <span>הלוואה לכל מטרה</span>
+                              <Link href='loan'>הלוואה לכל מטרה</Link>
                         </div>
                   </div>
 
@@ -42,17 +45,20 @@ export default function Header () {
                   </div>
 
 
-                  <div className='hidden xl:flex gap-x-8'>
-                        <span>Mail</span>
-                        <span>Phone</span>
-                        <span>Whatsapp</span>
+                  <div className='hidden xl:flex gap-x-6'>
+
+                        {/* <div className='footer-social-icon h-8 w-8 hover:bg-[#F4B400]'> */}
+                        <BiLogoGmail size={30} color='#F4B400' className="header-social-icon" />
+                        {/* </div> */}
+                        <AiTwotonePhone size={30} color='#0582ca' className="header-social-icon" />
+                        <BsWhatsapp size={30} color="#25D366" className="header-social-icon"/>
                   </div>
 
                   <div className='header-link md:hidden cursor-pointer' onClick={() => setIsMenuOpen(true)}>
-                        <AiOutlineMenu size={18}/>
+                        <AiOutlineMenu size={18} />
                   </div>
 
-                  <SideMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen}/>
+                  <SideMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
             </header>
       )
 }

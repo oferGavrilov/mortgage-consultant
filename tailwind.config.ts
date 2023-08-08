@@ -8,8 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         'open-sans-hebrew': ['"Open Sans Hebrew"', 'sans-serif'],
+      },
+      colors: {
+        'title': '#0582ca',
+        'secondary-bg': '#ced0ce'
       }
     },
   },

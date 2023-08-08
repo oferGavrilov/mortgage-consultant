@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Hero () {
       return (
-            <section className='pt-28 pb-8 px-8 flex'>
-                  <div>
+            <section className='pt-28 pb-8 px-8 flex justify-between'>
+                  <div className='fade-left'>
                         <div className='flex items-center gap-x-2 text-4xl text-[#6c757d]'>
                               <h2 className='font-bold '>יועץ משכנתאות - </h2>
                               <span>מי אני ? </span>
@@ -25,7 +25,7 @@ export default function Hero () {
                               </p>
                         </div>
                   </div>
-                  <div className='hidden md:block mt-auto'>
+                  <div className='hidden md:block mt-auto ml-16'>
                         <Image src="/imgs/hero.png" alt='hero' width={400} height={600} />
                   </div>
             </section>
