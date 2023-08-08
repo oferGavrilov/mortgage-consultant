@@ -3,10 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import SideMenu from './SideMenu'
+import { AiOutlineMenu, AiTwotonePhone } from 'react-icons/ai';
 
-import { AiOutlineMenu } from 'react-icons/Ai'
 import { BiLogoGmail } from 'react-icons/bi'
-import { AiTwotonePhone } from 'react-icons/Ai'
 import { BsWhatsapp } from 'react-icons/bs'
 
 export default function Header () {
