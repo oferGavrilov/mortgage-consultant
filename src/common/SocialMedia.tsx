@@ -17,10 +17,11 @@ export default function SocialMedia () {
                               <BiLogoGmail size={25} color='#ffffff' />
                         </div>
 
-                        <div className='footer-social-icon hover:bg-[#25D366]'>
+                        <div className='footer-social-icon  hover:bg-whatsapp'>
                               <BsWhatsapp size={25} color='#ffffff' />
                         </div>
                   </div>
             </div>
       )
 }
+// 25D366

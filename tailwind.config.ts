@@ -13,7 +13,9 @@ const config: Config = {
       },
       colors: {
         'title': '#0582ca',
-        'secondary-bg': '#ced0ce'
+        'secondary-bg': '#ced0ce',
+        'whatsapp':'#25D366',
+        'facebook':'#4267B2',
       }
     },
   },

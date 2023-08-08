@@ -19,7 +19,7 @@ export default function ContactUs () {
 
       <div className='p-6 w-full text-center'>
         <h2 className='font-semibold text-xl'>השאירו פרטים ליצירת קשר</h2>
-        <HiOutlineArrowCircleDown size={45} color="#0582ca" className="my-8 mx-auto transition-all duration-200 hover:scale-110 hover:drop-shadow-md" />
+        <HiOutlineArrowCircleDown size={45} color="#0f9def" className="my-8 mx-auto transition-all duration-200 hover:scale-110 hover:drop-shadow-md" />
 
         <form className=''>
           <div className='grid md:grid-cols-2 gap-4'>

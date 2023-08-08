@@ -17,28 +17,34 @@ export default function Header () {
                         <Image
                               src='/imgs/logo.jpeg'
                               alt='logo'
-                              width={230}
+                              width={220}
                               height={200}
                         />
                   </Link>
 
                   <div className='hidden md:flex gap-x-3'>
-                        <div className='header-link'>
-                              <Link href='/service/new-mortgage'>ייעוץ משכנתא חדשה</Link>
-                        </div>
-                        <div className='header-link'>
-                              <Link href='exists-mortgage'>מחזור משכנתא קיימת</Link>
-                        </div>
-                        <div className='header-link'>
-                              <Link href='loan'>הלוואה לכל מטרה</Link>
-                        </div>
+                        <Link href='/service/new-mortgage'>
+                              <div className='header-link'>
+                                    ייעוץ משכנתא חדשה
+                              </div>
+                        </Link>
+                        <Link href='/service/exists-mortgage'>
+                              <div className='header-link'>
+                                    מחזור משכנתא קיימת
+                              </div>
+                        </Link>
+                        <Link href='/service/loan'>
+                              <div className='header-link'>
+                                    הלוואה לכל מטרה
+                              </div>
+                        </Link>
                   </div>
 
                   <div className='hidden lg:flex gap-x-4'>
                         <div className='header-link'>
                               <span>לקוחות ממליצים</span>
                         </div>
-                        <Link href='contact-us' className='header-link'>
+                        <Link href='/contact-us' className='header-link'>
                               <span>צור קשר</span>
                         </Link>
                   </div>
@@ -50,7 +56,7 @@ export default function Header () {
                         <BiLogoGmail size={30} color='#F4B400' className="header-social-icon" />
                         {/* </div> */}
                         <AiTwotonePhone size={30} color='#0582ca' className="header-social-icon" />
-                        <BsWhatsapp size={30} color="#25D366" className="header-social-icon"/>
+                        <BsWhatsapp size={30} color="#25D366" className="header-social-icon" />
                   </div>
 
                   <div className='header-link md:hidden cursor-pointer' onClick={() => setIsMenuOpen(true)}>

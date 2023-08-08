@@ -3,11 +3,11 @@ import React from 'react'
 
 export default function Hero () {
       return (
-            <section className='pt-28 pb-8 px-8 flex justify-between'>
+            <section className='pt-12 md:pt-20 pb-8 px-8 flex justify-between'>
                   <div className='fade-left'>
-                        <div className='flex items-center gap-x-2 text-4xl text-[#6c757d]'>
+                        <div className='flex items-center whitespace-nowrap gap-x-2 text-2xl md:text-4xl text-title'>
                               <h2 className='font-bold '>יועץ משכנתאות - </h2>
-                              <span>מי אני ? </span>
+                              <span className=''>מי אני ? </span>
                         </div>
 
                         <div className='max-w-2xl text-lg text-gray-500 font-sans tracking-wider'>
