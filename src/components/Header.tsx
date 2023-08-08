@@ -1,12 +1,16 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 import { AiOutlineMenu } from 'react-icons/Ai'
+import SideMenu from './SideMenu'
 
 export default function Header () {
+
+      const [isMenuOpen, setIsMenuOpen] = React.useState(false)
       return (
-            <header className='flex justify-between items-center font-open-sans-hebrew bg-stone-100 px-6 fixed top-0 z-10 w-full h-[66px] shadow-xl shadow-stone-100'>
+            <header className='flex justify-between items-center font-open-sans-hebrew bg-stone-100 px-6 fixed top-0 z-20 w-full h-[66px] shadow-xl shadow-stone-100'>
                   <Link href='/'>
                         <Image
                               src='/imgs/logo.jpeg'
@@ -44,11 +48,11 @@ export default function Header () {
                         <span>Whatsapp</span>
                   </div>
 
-                  <div className='header-link md:hidden cursor-pointer'>
+                  <div className='header-link md:hidden cursor-pointer' onClick={() => setIsMenuOpen(true)}>
                         <AiOutlineMenu size={18}/>
                   </div>
 
-
+                  <SideMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen}/>
             </header>
       )
 }

@@ -6,7 +6,7 @@ import ContactUs from '@/components/ContactUs'
 
 export default function Home () {
   return (
-    <main className='mt-[66px]'>
+    <main className='mt-[66px] flex flex-col gap-y-24'>
       <Hero />
       <UnderHero />
       <Services />

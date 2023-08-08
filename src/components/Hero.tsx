@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Hero () {
       return (
-            <section className='pt-28 pb-16 px-8 flex'>
+            <section className='pt-28 pb-8 px-8 flex'>
                   <div>
                         <div className='flex items-center gap-x-2 text-4xl text-[#6c757d]'>
                               <h2 className='font-bold '>יועץ משכנתאות - </h2>
@@ -25,7 +25,7 @@ export default function Hero () {
                               </p>
                         </div>
                   </div>
-                  <div className='hidden md:block relative top-20 left-0'>
+                  <div className='hidden md:block mt-auto'>
                         <Image src="/imgs/hero.png" alt='hero' width={400} height={600} />
                   </div>
             </section>

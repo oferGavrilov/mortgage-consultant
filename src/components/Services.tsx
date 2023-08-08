@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Services () {
   return (
-    <section className='mx-12 my-24'>
-      <div className='flex flex-col md:flex-row justify-center items-center gap-8'>
+    <section className='m-12 '>
+      <div className='flex flex-col md:flex-row gap-y-16 justify-center items-center md:gap-x-8'>
 
         <div className='service-container'>
           <h2 className='service-title'>ייעוץ משכנתא חדשה</h2>
@@ -44,7 +44,6 @@ export default function Services () {
             height={38}
           />
         </div>
-
       </div>
     </section>
   )

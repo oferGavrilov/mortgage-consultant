@@ -45,8 +45,8 @@ export default function ContactUs () {
         </form>
       </div>
 
-      <div className='triangle-top -top-[22px]'></div>
-      <div className='triangle-bottom -bottom-[67px]'></div>
+      <div className='triangle-top -top-[20px]'></div>
+      <div className='triangle-bottom -bottom-[60px]'></div>
     </section>
   )
 }

@@ -29,6 +29,13 @@ body {
   .under-hero-btn {
     @apply underline underline-offset-2 cursor-pointer transition-colors duration-200 hover:text-[#6c757d];
   }
+  /* Side Menu */
+  .side-menu-container {
+    @apply md:hidden h-screen bg-gray-200 w-[280px] fixed top-0 left-0 transition-transform duration-300 shadow-2xl shadow-gray-400;
+  }
+  .side-menu-li {
+    @apply px-4 py-2 border-b-2 border-gray-300 text-lg tracking-wide cursor-pointer hover:bg-gray-300;
+  }
   /* Services */
   .service-container{
     @apply custom-shadow py-6 px-2 text-center relative flex flex-col gap-y-10;
@@ -48,7 +55,18 @@ body {
 
   /* Contact Us */
   .contact-input {
-    @apply px-4 py-2 rounded-md border-b-2 bg-[#ffffff62] outline-none focus:border-[#0582ca] focus:bg-stone-200 transition-all duration-200;
+    @apply px-4 py-2 rounded-md border-b-2 bg-[#ffffff62] outline-none focus:border-[#0582ca] focus:bg-stone-200 transition-colors duration-200;
+  }
+
+  /* Footer */
+  .footer-social-icon {
+    @apply bg-[#6c757d] h-12 w-12 rounded-full flex items-center justify-center transition-colors duration-200 cursor-pointer;
+  }
+  .footer-title{
+    @apply text-center py-4 text-lg tracking-wider text-[#0582ca] whitespace-nowrap;
+  }
+  .footer-li {
+    @apply flex items-center gap-x-2 leading-[2.2rem] cursor-pointer hover:text-[#0582ca];
   }
 }
 
@@ -63,9 +81,9 @@ body {
   z-index: 10;
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 45px solid #ced0ce; 
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 40px solid #ced0ce; 
 }
 .triangle-bottom {
   position: absolute;
@@ -74,8 +92,9 @@ body {
   z-index: 10;
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-top: 45px solid #ced0ce; 
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-top: 40px solid #ced0ce; 
 }
+
 }
