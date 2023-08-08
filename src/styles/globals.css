@@ -2,26 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  direction: rtl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+
+  body {
+    @apply bg-gradient-to-b
+     from-stone-50 via-stone-100
+      to-stone-300 min-h-screen text-[#242424]
+      font-sans;
+  }
+}
+@font-face {
+  font-family: 'open-sans-hebrew';
+  src: url('/fonts/OpenSansHebrew-Regular.ttf') format('ttf');
+}
+
+@layer components {
+  /* Header */
+  .header-link {
+    @apply transition-colors duration-300 cursor-pointer p-2 rounded-full whitespace-nowrap hover:bg-gray-200;
+  }
+  /* Under Hero */
+  .under-hero-btn {
+    @apply underline underline-offset-2 cursor-pointer transition-colors duration-200 hover:text-[#6c757d];
+  }
+  /* Services */
+  .service-container{
+    @apply custom-shadow py-6 px-2 text-center relative flex flex-col gap-y-10;
+  }
+  .service-title {
+    @apply font-bold text-[#495057] text-lg;
+  }
+  .service-description {
+    @apply max-w-xs;
+  }
+  .service-btn {
+    @apply bg-[#ced0ce] px-4 py-2 w-max mx-auto font-bold text-[#343a40] tracking-wide transition-all duration-500 shadow-gray-400 hover:scale-110 hover:shadow-lg;
+  }
+  .service-img{
+    @apply absolute left-1/2 transform -translate-x-1/2 drop-shadow-xl;
+  }
+
+  /* Contact Us */
+  .contact-input {
+    @apply px-4 py-2 rounded-md border-b-2 bg-[#ffffff62] outline-none focus:border-[#0582ca] focus:bg-stone-200 transition-all duration-200;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer utilities {
+  .custom-shadow {
+    box-shadow: 1px 10px 16px 3px #c1bebe;
+}
+.triangle-top {
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 45px solid #ced0ce; 
+}
+.triangle-bottom {
+  position: absolute;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 45px solid #ced0ce; 
+}
 }
